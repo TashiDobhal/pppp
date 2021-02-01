@@ -1,0 +1,12 @@
+package com.cg.util;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class JPAUtil {
+	
+	
+	protected EntityManagerFactory  emf=Persistence.createEntityManagerFactory("JPA-PU");
+		 protected EntityManager em=emf.createEntityManager();
+}
+

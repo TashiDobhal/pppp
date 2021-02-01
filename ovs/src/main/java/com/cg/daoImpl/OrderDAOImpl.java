@@ -1,0 +1,75 @@
+package com.cg.daoImpl;
+
+import java.util.List;
+import javax.persistence.Query;
+import com.cg.dao.OrderDAO;
+import com.cg.domain.Order;
+import com.cg.util.DBUtil;
+public class OrderDAOImpl extends DBUtil implements OrderDAO{
+
+	@Override
+	public void addOrder(Order order) {
+		//order.getCustomerId();
+		//order.getOrderDate();
+		//order.getStatus();
+		//order.getTotalAmount();
+		
+	        em.getTransaction().begin();
+			em.persist(order);
+			em.getTransaction().commit();
+			em.close();
+			emf.close();
+	        
+	}
+
+	@Override
+	public void updateOrderDetails(Order order) {
+			
+	 
+	}
+
+	@Override
+	public void cancelOrder(Order order) {
+		order=em.find(Order.class, order.getOrderNo());
+		em.getTransaction().begin();
+		em.remove(order);
+		System.out.println("Your Order is Cancelled!!!");
+		em.getTransaction().commit();
+		em.close();
+		emf.close();
+		
+		
+	}
+
+	@Override
+	public void viewOrder(Order order) {
+		em.getTransaction().begin();
+		order=em.find(Order.class, order.getOrderNo());
+		System.out.println("Order No:"+order.getOrderNo()+"Order Date:"+order.getOrderDate()+"OrderStatus:"+order.getStatus()+"Order Amount:"+order.getTotalAmount());
+		em.getTransaction().commit();
+		em.close();
+		emf.close();
+		
+	}
+
+	@Override
+	public List<Order> viewAllOrders(int customerId) {
+		em.getTransaction().begin();
+		Query query=em.createQuery("from Order");
+		List<Order> order=query.getResultList();
+		for(Order or:order) {
+			System.out.println("Order No:"+or.getOrderNo());
+			System.out.println("Order Date:"+or.getOrderDate());
+			System.out.println("Order Status:"+or.getStatus());
+			System.out.println("Order Amount:"+or.getTotalAmount());
+			
+		}
+		em.getTransaction().commit();
+		em.close();
+		emf.close();
+		
+		return null;
+	}
+
+
+}

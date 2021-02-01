@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.cg.domain.VegetableDTO"/>
+    <fullyQualifiedTypeName name="com.cg.domain.CartDTO"/>
+    <fullyQualifiedTypeName name="com.cg.util.JPAUtil"/>
+    <fullyQualifiedTypeName name="com.cg.service.OrderService"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+    <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="com.cg.util.DBUtil"/>
+    <fullyQualifiedTypeName name="com.cg.domain.Order"/>
+    <fullyQualifiedTypeName name="com.cg.dao.OrderDAO"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="com.cg.daoImpl.OrderDAOImpl"/>
+    <fullyQualifiedTypeName name="javax.management.Query"/>
+</qualifiedTypeNameHistroy>
